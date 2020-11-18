@@ -2,11 +2,12 @@ import os
 import sys
 import django
 import asyncio
-from datacenter.models import Passcard, Visit
-
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
 django.setup()
+
+
+from datacenter.models import Passcard, Visit
 
 
 async def print_visits_not_leaved():
