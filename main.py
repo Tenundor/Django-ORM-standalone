@@ -10,7 +10,5 @@ from datacenter.models import Passcard, Visit
 
 if __name__ == "__main__":
     # Программируем здесь
-    passcards = Passcard.objects.all()
-    active_passcards = Passcard.objects.filter(is_active=True)
-    print("Всего пропусков", len(passcards))
-    print("Активных пропусков", len(active_passcards))
+    visits_not_leaved = Visit.objects.filter(leaved_at__isnull=True)
+    print(visits_not_leaved)
